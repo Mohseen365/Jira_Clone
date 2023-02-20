@@ -67,4 +67,40 @@ body{
 .action-btn-cont i{
   font-size: 3vw;
   color: white;
+  
+}
+
+.modal-cont {
+  position: absolute;
+  top: calc((100vh - 50vh)/2); /*mistake of white-space for -*/
+  left: calc((100vw - 50vw)/2);
+  display: none;
+  height: 50vh;
+  width: 50vw;
+  
+}
+
+.textarea-cont {
+  height: 100%;
+  width: 80%;
+  background-color: #dfe4ea;
+  border: none;
+  resize: none;
+  outline: none;
+  
+}
+
+.priority-color-cont {
+  height: 100%;
+  width: 20%;
+  background-color: #4b4b4b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.priority-color-cont>div {
+  height: 12%;
+  width: 60%;
 }
