@@ -7,19 +7,19 @@ body{
   padding: 0;
 }
 
-.toolbox-cont {
+.toolbox-container {
   display: flex;
   align-items: center;
   height: 8vw;
-  width: 100vw;
+  
   background-color: #4b4b4b;
 }
 
-.toolbox-cont>* {
+.toolbox-container>* {
   margin-left: 4vw;
 }
 
-.toolbox-color-cont {
+.toolbox-color-container {
   display: flex;
   background-color: #3d3d3d;
   height: 65%;
@@ -29,7 +29,7 @@ body{
   
 }
 
-.toolbox-color-cont>div {
+.toolbox-color-container>div {
   height: 50%;
   width: 17%;
 }
@@ -54,7 +54,7 @@ body{
   background-color: black;
 }
 
-.action-btn-cont {
+.action-btn-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -64,13 +64,13 @@ body{
 
 }
 
-.action-btn-cont i{
+.action-btn-container i{
   font-size: 3vw;
   color: white;
   
 }
 
-.modal-cont {
+.modal-container {
   position: absolute;
   top: calc((100vh - 50vh)/2); /*mistake of white-space for -*/
   left: calc((100vw - 50vw)/2);
@@ -80,7 +80,7 @@ body{
   
 }
 
-.textarea-cont {
+.textarea-container {
   height: 100%;
   width: 80%;
   background-color: #dfe4ea;
@@ -90,7 +90,7 @@ body{
   
 }
 
-.priority-color-cont {
+.priority-color-container {
   height: 100%;
   width: 20%;
   background-color: #4b4b4b;
@@ -100,7 +100,51 @@ body{
   align-items: center;
 }
 
-.priority-color-cont>div {
+.priority-color-container>div {
   height: 12%;
   width: 60%;
+}
+
+.active{
+  border: 5px solid red;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  
+}
+
+.ticket-container {
+  height: 12rem;
+  width: 15rem;  
+  background-color:#f1f2f6;
+}
+
+.ticket-color {
+  height: 1rem;
+  
+}
+
+.task-area {
+  height: calc(100% - 1rem - 2rem);
+ font-size: 1.5rem;
+ overflow: hidden;
+  
+}
+
+.ticket-lock {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -16px;
+  margin-right: 4px;
+  font-size: 1.5rem;
+}
+
+.ticket-id {
+  
+  background-color: red;
 }
