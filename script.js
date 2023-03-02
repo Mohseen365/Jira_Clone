@@ -68,6 +68,7 @@ function createTicket(ticketColor, data, ticketId) {
       <i class="fa-solid fa-lock"></i>
     </div>
   `;
+
   mainContainer.appendChild(ticketContainer);
   //if ticket is generated first time than we will store in local Storage
   if (!ticketId) {
@@ -78,6 +79,8 @@ function createTicket(ticketColor, data, ticketId) {
     });
     localStorage.setItem("tickets", JSON.stringify(ticketsArr));
   }
+
+  handleRemoval(ticketContainer, id);
   
 }
 
@@ -123,4 +126,21 @@ for (let i = 0; i < toolBoxColors.length; i++) {
     //show all tickets
     ticketsArr.forEach((ticket) => createTicket(ticket.ticketColor, ticket.ticketTask, ticket.ticketId));
   })
+}
+
+function handleRemoval (ticketContainer, id) {
+  ticketContainer.addEventListener('click', function () {
+    if (!isRemoveBtnActive) {
+      return;
+    }
+    let idx = getTicketIdx(id);
+    ticketsArr.splice(idx, 1);
+    localStorage.setItem("tickets", JSON.stringify(ticketsArr));
+    ticketContainer.remove();
+  });
+}
+
+function getTicketIdx(id) {
+  let idx = ticketsArr.findIndex((ticketObj) => ticketObj.ticketId == id);
+  return idx;
 }
