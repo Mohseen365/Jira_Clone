@@ -20,6 +20,7 @@ var isModalPresent = false;
 var isRemoveBtnActive = false;
 var ticketsArr = [];
 
+//display modal container
 addBtn.addEventListener('click', function ( ) {
   if (isModalPresent == false) {
     modalContainer.style.display = 'flex';
